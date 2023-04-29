@@ -12,5 +12,4 @@ Add-Member -InputObject $NewUser -MemberType NoteProperty -Name "CountryCode" -V
 Add-Member -InputObject $NewUser -MemberType NoteProperty -Name "Country" -Value $CountryName
 [void]$DetailedUsers.Add($NewUser)
 }
-
 $DetailedUsers | Export-Excel -Path "$ExportFolder\Import.xlsx" -WorksheetName "Users w Country Detailed"
